@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Quiz</title>
+</head>
+<body>
+
+<h1>Online Quiz</h1>
+
+<form method="POST">
+    {% csrf_token %}
+
+    {% for question in questions %}
+
+        <h3>{{ question.question }}</h3>
+
+        <input type="radio"
+               name="question_{{ forloop.counter }}"
+               value="{{ question.correct_answer }}">
+
+        {{ question.correct_answer }}
+
+        <br>
+
+        {% for option in question.incorrect_answers %}
+
+            <input type="radio"
+                   name="question_{{ forloop.parentloop.counter }}"
+                   value="{{ option }}">
+
+            {{ option }}
+
+            <br>
+
+        {% endfor %}
+
+        <hr>
+
+    {% endfor %}
+
+    <button type="submit">
+        Submit Quiz
+    </button>
+
+</form>
+
+</body>
+</html>
