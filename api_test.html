@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>API Questions</title>
+</head>
+<body>
+
+<h1>Online Quiz Questions</h1>
+
+{% for question in questions %}
+
+    <h3>{{ question.question }}</h3>
+
+    <ul>
+        <li>{{ question.correct_answer }}</li>
+
+        {% for option in question.incorrect_answers %}
+            <li>{{ option }}</li>
+        {% endfor %}
+    </ul>
+
+    <hr>
+
+{% endfor %}
+
+</body>
+</html>

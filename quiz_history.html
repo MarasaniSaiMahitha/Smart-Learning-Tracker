@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quiz History</title>
+</head>
+<body>
+
+<h1>Quiz History</h1>
+
+<table border="1">
+
+    <tr>
+        <th>Date</th>
+        <th>Topic</th>
+        <th>Score</th>
+    </tr>
+
+    {% for result in results %}
+
+    <tr>
+        <td>{{ result.date_taken }}</td>
+        <td>{{ result.topic.name }}</td>
+        <td>{{ result.score }}/{{ result.total_questions }}</td>
+    </tr>
+
+    {% endfor %}
+
+</table>
+
+<br>
+
+<a href="/dashboard/">
+    Back to Dashboard
+</a>
+
+</body>
+</html>

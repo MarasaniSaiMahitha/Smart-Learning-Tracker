@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<title>Certificate</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#ececec;
+    height:100vh;
+    overflow:hidden;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.certificate{
+    width:75%;
+    height:95vh;
+    max-width: 850px;
+    margin: 20px auto;
+    background:#fff;
+    position:relative;
+
+    border:8px solid #d4af37;
+    overflow:hidden;
+}
+
+/* Decorative corners */
+
+.corner-top-left{
+    position:absolute;
+    top:0;
+    left:0;
+    width:180px;
+    height:180px;
+    background:linear-gradient(135deg,#082b67 60%,#d4af37 60%);
+    clip-path:polygon(0 0,100% 0,0 100%);
+}
+
+.corner-bottom-right{
+    position:absolute;
+    bottom:0;
+    right:0;
+    width:180px;
+    height:180px;
+    background:linear-gradient(315deg,#082b67 60%,#d4af37 60%);
+    clip-path:polygon(100% 100%,0 100%,100% 0);
+}
+
+.inner-border{
+    position:absolute;
+    inset:15px;
+    border:2px solid #d4af37;
+}
+
+.content{
+    position:relative;
+    z-index:5;
+
+    height:100%;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
+    align-items:center;
+
+    text-align:center;
+
+    padding:20px;
+}
+
+.logo{
+    font-size:38px;
+    margin-bottom:2px;
+}
+
+.title{
+    font-family:'Cinzel', serif;
+    font-size:52px;
+    color:#082b67;
+    letter-spacing:2px;
+}
+
+.subtitle{
+    font-family:'Cinzel', serif;
+    font-size:24px;
+    color:#c89a2a;
+    margin-top:0px;
+}
+
+.ribbon{
+    margin-top:10px;
+
+    background:#082b67;
+    color:white;
+
+    padding:8px 35px;
+
+    font-family:'Cinzel', serif;
+    font-size:15px;
+}
+
+.name{
+    margin-top:10px;
+
+    font-family:'Great Vibes', cursive;
+    color:#082b67;
+
+    font-size:70px;
+    font-weight:normal;
+}
+
+.line{
+    width:350px;
+    height:2px;
+    background:#d4af37;
+    margin:6px 0;
+}
+
+.completed{
+    font-family:'Poppins', sans-serif;
+    font-size:18px;
+    margin-top: 5px;
+}
+
+.main-course{
+    margin-top:8px;
+
+    color:#082b67;
+    font-size:24px;
+    font-family:'Poppins', sans-serif;
+    font-weight:600;
+}
+
+.topic{
+    color:#c89a2a;
+    font-size:18px;
+    margin-top:4px;
+    font-family:'Poppins', sans-serif;
+}
+
+.msg{
+    margin-top:12px;
+    font-size:14px;
+    font-family:'Poppins', sans-serif;
+}
+
+.msg2{
+    margin-top:4px;
+
+    color:#082b67;
+    font-size:16px;
+    font-weight:600;
+    font-family:'Poppins', sans-serif;
+}
+
+.badge{
+    margin-top:0px;
+    font-size:40px;
+}
+
+.footer{
+    position:absolute;
+
+    bottom:20px;
+    left:0;
+    right:0;
+
+    display:flex;
+    justify-content:space-around;
+
+    font-family:'Poppins', sans-serif;
+}
+
+.footer-title{
+    color:#c89a2a;
+    font-size:14px;
+    font-weight:600;
+}
+
+.footer-text{
+    font-size:14px;
+    margin-top:5px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="certificate">
+
+
+<div class="corner-top-left"></div>
+<div class="corner-bottom-right"></div>
+
+<div class="inner-border"></div>
+
+<div class="content">
+
+    <div class="logo">🎓</div>
+
+    <div class="title">
+        CERTIFICATE
+    </div>
+
+    <div class="subtitle">
+        OF ACHIEVEMENT
+    </div>
+
+    <div class="ribbon">
+        THIS IS TO CERTIFY THAT
+    </div>
+
+    <div class="name">
+        {{ request.user.username }}
+    </div>
+
+    <div class="line"></div>
+
+    <div class="completed">
+        has successfully completed
+    </div>
+
+    <div class="main-course">
+        Smart Learning Tracker Assessment
+    </div>
+
+    <div class="topic">
+        {{ topic.name }} Assessment
+    </div>
+
+    <div class="msg">
+        Your dedication and performance are truly commendable.
+    </div>
+
+    <div class="msg2">
+        Keep Learning, Keep Growing!
+    </div>
+
+    <div class="badge">
+        🏅
+    </div>
+
+</div>
+
+</div>
+
+</body>
+</html>

@@ -4,3 +4,19 @@ __pycache__/
 db.sqlite3
 .env
 .vscode/
+# Virtual environment files
+Activate.ps1
+activate
+activate.bat
+activate.fish
+deactivate.bat
+django-admin.exe
+pip.exe
+pip3.exe
+pip3.14.exe
+python.exe
+pythonw.exe
+pyvenv.cfg
+idna.exe
+normalizer.exe
+sqlformat.exe
